@@ -7,7 +7,7 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/jkdepj for more book information.
 #---
-ENV["RAILS_ENV"] ||= "production"
+ENV["RAILS_ENV"] = "production" if ENV["RAILS_ENV"].nil?
 
 # load the rails environment
 require File.dirname(__FILE__) + "/../../config/environment"

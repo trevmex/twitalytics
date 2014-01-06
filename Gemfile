@@ -11,12 +11,12 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.0.1'
-gem 'json', '1.6.6'
+gem 'json'
+
+gem 'get_back'
 
 # START:therubyracer
-platform :ruby do
-  gem 'therubyracer', '0.9.10'
-end
+gem 'therubyrhino'
 # END:therubyracer
 
 group :test do
@@ -24,15 +24,16 @@ group :test do
 end
 
 # START:db_driver
+
 group :production do
   # START:pg
-  gem 'pg', '0.13.2'
+  gem 'activerecord-jdbcpostgresql-adapter'
   # END:pg
 end
 
 group :development, :test do
   # START:sqlite
-  gem 'sqlite3', '1.3.5'
+  gem 'activerecord-jdbcsqlite3-adapter'
   # END:sqlite
 end
 # END:db_driver
